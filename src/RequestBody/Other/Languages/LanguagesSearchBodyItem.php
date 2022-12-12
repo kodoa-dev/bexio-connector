@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Other\Languages;
+namespace Aesislabs\BexioConnector\RequestBody\Other\Languages;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class LanguagesSearchBodyItem extends AbstractSearchBodyItem
 {

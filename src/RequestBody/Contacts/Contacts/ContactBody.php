@@ -1,10 +1,10 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Contacts\Contacts;
+namespace Aesislabs\BexioConnector\RequestBody\Contacts\Contacts;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
-use Fatpanda\BexioConnector\RequestBody\RequestBodyItemInterface;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\RequestBodyItemInterface;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

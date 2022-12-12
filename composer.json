@@ -4,7 +4,7 @@
   "version": "dev-master",
   "description": "A php library to communicate with the API of Bexio",
   "keywords": ["bexio"],
-  "homepage": "https://github.com/fatpanda-gmbh/bexio-connector",
+  "homepage": "https://github.com/aesislabs/bexio-connector",
   "license": "MIT",
   "authors": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "name": "Additional contributors",
-      "homepage": "https://github.com/fatpanda-gmbh/bexio-connector/graphs/contributors"
+      "homepage": "https://github.com/aesislabs/bexio-connector/graphs/contributors"
     }
   ],
   "require": {
@@ -34,12 +34,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Fatpanda\\BexioConnector\\": "src"
+      "Aesislabs\\BexioConnector\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Fatpanda\\BexioConnector\\Tests\\": "tests"
+      "Aesislabs\\BexioConnector\\Tests\\": "tests"
     }
   }
 }

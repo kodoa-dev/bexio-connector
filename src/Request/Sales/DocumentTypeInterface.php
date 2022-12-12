@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Fatpanda\BexioConnector\Request\Sales;
+namespace Aesislabs\BexioConnector\Request\Sales;
 
 
 interface DocumentTypeInterface

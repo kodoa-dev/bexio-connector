@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Orders;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Orders;
 
 
 interface RepetitionInterface

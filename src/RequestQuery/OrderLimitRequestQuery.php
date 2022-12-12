@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery;
+namespace Aesislabs\BexioConnector\RequestQuery;
 
 abstract class OrderLimitRequestQuery extends LimitRequestQuery
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Orders;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Orders;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;

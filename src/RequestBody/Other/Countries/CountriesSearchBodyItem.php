@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Other\Countries;
+namespace Aesislabs\BexioConnector\RequestBody\Other\Countries;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class CountriesSearchBodyItem extends AbstractSearchBodyItem
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Contacts\ContactGroups;
+namespace Aesislabs\BexioConnector\Request\Contacts\ContactGroups;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/v2ShowContactGroup
@@ -12,5 +12,5 @@ class ShowContactGroupRequest extends Request
     const API_PATH = '/contact_group/{contact_group_id}';
     const API_METHOD = 'GET';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Contacts\ContactGroup';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Contacts\ContactGroup';
 }

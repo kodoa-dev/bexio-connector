@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Banking;
+namespace Aesislabs\BexioConnector\RequestQuery\Banking;
 
-use Fatpanda\BexioConnector\RequestQuery\RequestQueryInterface;
+use Aesislabs\BexioConnector\RequestQuery\RequestQueryInterface;
 
 class UpdateBankPaymentRequestQuery implements RequestQueryInterface
 {

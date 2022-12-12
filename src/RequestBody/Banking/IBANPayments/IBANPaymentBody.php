@@ -1,11 +1,11 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Banking\IBANPayments;
+namespace Aesislabs\BexioConnector\RequestBody\Banking\IBANPayments;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
-use Fatpanda\BexioConnector\RequestBody\Banking\BankPaymentAmount;
-use Fatpanda\BexioConnector\RequestBody\Banking\BankPaymentRecipient;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\Banking\BankPaymentAmount;
+use Aesislabs\BexioConnector\RequestBody\Banking\BankPaymentRecipient;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -14,14 +14,14 @@ class IBANPaymentBody extends AbstractBody
     /**
      * @var BankPaymentAmount
      * @SerializedName("instructed_amount")
-     * @Type("Fatpanda\BexioConnector\RequestBody\Banking\BankPaymentAmount")
+     * @Type("Aesislabs\BexioConnector\RequestBody\Banking\BankPaymentAmount")
      */
     protected $instructedAmount;
 
     /**
      * @var BankPaymentRecipient
      * @SerializedName("recipient")
-     * @Type("Fatpanda\BexioConnector\RequestBody\Banking\BankPaymentRecipient")
+     * @Type("Aesislabs\BexioConnector\RequestBody\Banking\BankPaymentRecipient")
      */
     protected $recipient;
 

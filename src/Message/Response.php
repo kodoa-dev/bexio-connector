@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Message;
+namespace Aesislabs\BexioConnector\Message;
 
 abstract class Response
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Contacts\ContactSectors;
+namespace Aesislabs\BexioConnector\Request\Contacts\ContactSectors;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/v2SearchContactSectors
@@ -12,5 +12,5 @@ class SearchContactSectorsRequest extends Request
     const API_PATH = '/contact_branch/search';
     const API_METHOD = 'POST';
 
-    const RESPONSE_CONTAINER = 'array<Fatpanda\BexioConnector\Container\Contacts\ContactSector>';
+    const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Contacts\ContactSector>';
 }

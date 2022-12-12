@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Banking\ISRPayments;
+namespace Aesislabs\BexioConnector\Request\Banking\ISRPayments;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/ShowISRPayment
@@ -13,5 +13,5 @@ class ShowISRPaymentRequest extends Request
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Banking\BankISRPayment';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Banking\BankISRPayment';
 }

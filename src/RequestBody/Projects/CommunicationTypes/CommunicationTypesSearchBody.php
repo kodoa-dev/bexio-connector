@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Projects\CommunicationTypes;
+namespace Aesislabs\BexioConnector\RequestBody\Projects\CommunicationTypes;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBody;
 
 class CommunicationTypesSearchBody extends AbstractSearchBody
 {

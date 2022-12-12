@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Projects;
+namespace Aesislabs\BexioConnector\RequestQuery\Projects;
 
-use Fatpanda\BexioConnector\RequestQuery\OrderLimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\OrderLimitRequestQuery;
 
 class ProjectStatusesRequestQuery extends OrderLimitRequestQuery
 {

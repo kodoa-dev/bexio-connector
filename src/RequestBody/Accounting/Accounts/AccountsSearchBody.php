@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Accounting\Accounts;
+namespace Aesislabs\BexioConnector\RequestBody\Accounting\Accounts;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBody;
 
 class AccountsSearchBody extends AbstractSearchBody
 {

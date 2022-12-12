@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Items\StockAreas;
+namespace Aesislabs\BexioConnector\RequestBody\Items\StockAreas;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class StockAreasSearchBodyItem extends AbstractSearchBodyItem
 {

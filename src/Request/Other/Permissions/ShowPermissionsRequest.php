@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Other\Permissions;
+namespace Aesislabs\BexioConnector\Request\Other\Permissions;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/Permissions
@@ -13,5 +13,5 @@ class ShowPermissionsRequest extends Request
     const API_PATH = '/permissions';
     const API_METHOD = 'GET';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Other\Permissions';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Permissions';
 }

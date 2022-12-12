@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Projects\Timesheets;
+namespace Aesislabs\BexioConnector\RequestBody\Projects\Timesheets;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

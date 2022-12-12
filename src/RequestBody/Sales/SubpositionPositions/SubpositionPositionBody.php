@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\SubpositionPositions;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\SubpositionPositions;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

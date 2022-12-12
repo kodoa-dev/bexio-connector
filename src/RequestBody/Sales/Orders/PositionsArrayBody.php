@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Orders;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Orders;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractArrayBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractArrayBody;
 
 class PositionsArrayBody extends AbstractArrayBody
 {

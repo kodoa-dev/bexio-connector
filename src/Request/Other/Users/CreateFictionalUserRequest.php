@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Other\Users;
+namespace Aesislabs\BexioConnector\Request\Other\Users;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/v3CreateFictionalUser
@@ -13,5 +13,5 @@ class CreateFictionalUserRequest extends Request
     const API_PATH = '/fictional_users';
     const API_METHOD = 'POST';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Other\FictionalUser';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\FictionalUser';
 }

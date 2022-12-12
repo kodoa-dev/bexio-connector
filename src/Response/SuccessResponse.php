@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Response;
+namespace Aesislabs\BexioConnector\Response;
 
-use Fatpanda\BexioConnector\Container\ContainerInterface;
-use Fatpanda\BexioConnector\Message\Response;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
+use Aesislabs\BexioConnector\Message\Response;
 
 class SuccessResponse extends Response
 {

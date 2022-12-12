@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Response;
+namespace Aesislabs\BexioConnector\Response;
 
-use Fatpanda\BexioConnector\Message\Response;
+use Aesislabs\BexioConnector\Message\Response;
 
 class ErrorResponse extends Response
 {

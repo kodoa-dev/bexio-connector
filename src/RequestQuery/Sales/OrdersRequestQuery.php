@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Sales;
+namespace Aesislabs\BexioConnector\RequestQuery\Sales;
 
-use Fatpanda\BexioConnector\RequestQuery\OrderLimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\OrderLimitRequestQuery;
 
 class OrdersRequestQuery extends OrderLimitRequestQuery
 {

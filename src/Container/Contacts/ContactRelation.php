@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Container\Contacts;
+namespace Aesislabs\BexioConnector\Container\Contacts;
 
 use DateTime;
-use Fatpanda\BexioConnector\Container\ContainerInterface;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

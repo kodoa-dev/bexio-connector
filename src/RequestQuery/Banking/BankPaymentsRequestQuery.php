@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Banking;
+namespace Aesislabs\BexioConnector\RequestQuery\Banking;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestQuery\LimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\LimitRequestQuery;
 
 class BankPaymentsRequestQuery extends LimitRequestQuery
 {

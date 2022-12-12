@@ -1,13 +1,13 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales;
+namespace Aesislabs\BexioConnector\RequestBody\Sales;
 
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedDefaultPositionBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedDiscountPositionBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedItemPositionBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedPagebreakPositionBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedSubtotalPositionBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedTextPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedDefaultPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedDiscountPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedItemPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedPagebreakPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedSubtotalPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedTextPositionBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

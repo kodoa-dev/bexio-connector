@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Contacts\Titles;
+namespace Aesislabs\BexioConnector\RequestBody\Contacts\Titles;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

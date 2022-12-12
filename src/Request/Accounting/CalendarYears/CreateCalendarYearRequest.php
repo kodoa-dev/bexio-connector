@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Accounting\CalendarYears;
+namespace Aesislabs\BexioConnector\Request\Accounting\CalendarYears;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/CreateCalendarYear
@@ -13,5 +13,5 @@ class CreateCalendarYearRequest extends Request
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Accounting\CalendarYear';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Accounting\CalendarYear';
 }

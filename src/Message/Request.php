@@ -1,12 +1,12 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Message;
+namespace Aesislabs\BexioConnector\Message;
 
-use Fatpanda\BexioConnector\Container\ContainerInterface;
-use Fatpanda\BexioConnector\RequestBody\RequestBodyInterface;
-use Fatpanda\BexioConnector\RequestQuery\RequestQueryInterface;
-use Fatpanda\BexioConnector\Response\ErrorResponse;
-use Fatpanda\BexioConnector\Response\SuccessResponse;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
+use Aesislabs\BexioConnector\RequestBody\RequestBodyInterface;
+use Aesislabs\BexioConnector\RequestQuery\RequestQueryInterface;
+use Aesislabs\BexioConnector\Response\ErrorResponse;
+use Aesislabs\BexioConnector\Response\SuccessResponse;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use JMS\Serializer\SerializerBuilder;

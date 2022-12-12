@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Container\Accounting;
+namespace Aesislabs\BexioConnector\Container\Accounting;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;

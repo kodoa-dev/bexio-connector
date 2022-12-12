@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Container\Accounting;
+namespace Aesislabs\BexioConnector\Container\Accounting;
 
-use Fatpanda\BexioConnector\Container\ContainerInterface;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -18,7 +18,7 @@ class ExchangeRate implements ContainerInterface
     /**
      * @var Currency
      * @SerializedName("exchange_currency")
-     * @Type("Fatpanda\BexioConnector\Container\Accounting\Currency")
+     * @Type("Aesislabs\BexioConnector\Container\Accounting\Currency")
      */
     protected $exchangeCurrency;
 

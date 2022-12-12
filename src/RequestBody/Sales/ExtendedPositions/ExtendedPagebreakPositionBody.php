@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\ExtendedPositions;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions;
 
-use Fatpanda\BexioConnector\RequestBody\Sales\PagebreakPositions\PagebreakPositionBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\PagebreakPositions\PagebreakPositionBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

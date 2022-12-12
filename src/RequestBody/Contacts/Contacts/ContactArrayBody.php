@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Contacts\Contacts;
+namespace Aesislabs\BexioConnector\RequestBody\Contacts\Contacts;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractArrayBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractArrayBody;
 
 class ContactArrayBody extends AbstractArrayBody
 {

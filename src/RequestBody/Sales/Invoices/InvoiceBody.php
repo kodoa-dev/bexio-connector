@@ -1,10 +1,10 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Invoices;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Invoices;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
-use Fatpanda\BexioConnector\RequestBody\Sales\PositionTrait;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\Sales\PositionTrait;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

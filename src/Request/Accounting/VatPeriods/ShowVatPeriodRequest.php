@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Accounting\VatPeriods;
+namespace Aesislabs\BexioConnector\Request\Accounting\VatPeriods;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/ShowVatPeriod
@@ -13,5 +13,5 @@ class ShowVatPeriodRequest extends Request
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Accounting\VatPeriod';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Accounting\VatPeriod';
 }

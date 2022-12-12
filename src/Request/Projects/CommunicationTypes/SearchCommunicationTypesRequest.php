@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Projects\CommunicationTypes;
+namespace Aesislabs\BexioConnector\Request\Projects\CommunicationTypes;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/v2SearchCommunicationTypes
@@ -12,5 +12,5 @@ class SearchCommunicationTypesRequest extends Request
     const API_PATH = '/communication_kind/search';
     const API_METHOD = 'POST';
 
-    const RESPONSE_CONTAINER = 'array<Fatpanda\BexioConnector\Container\Projects\CommunicationType>';
+    const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\CommunicationType>';
 }

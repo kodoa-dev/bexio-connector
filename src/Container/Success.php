@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Container;
+namespace Aesislabs\BexioConnector\Container;
 
-use Fatpanda\BexioConnector\Container\ContainerInterface;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

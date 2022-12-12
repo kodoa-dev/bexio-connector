@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody;
+namespace Aesislabs\BexioConnector\RequestBody;
 
 interface SearchBodyItemInterface
 {

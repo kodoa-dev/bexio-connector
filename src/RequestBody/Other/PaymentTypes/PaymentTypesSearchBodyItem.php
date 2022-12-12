@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Other\PaymentTypes;
+namespace Aesislabs\BexioConnector\RequestBody\Other\PaymentTypes;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class PaymentTypesSearchBodyItem extends AbstractSearchBodyItem
 {

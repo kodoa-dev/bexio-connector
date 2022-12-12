@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Projects\Timesheets;
+namespace Aesislabs\BexioConnector\RequestBody\Projects\Timesheets;
 
 use DateTime;
 use JMS\Serializer\Annotation\SerializedName;

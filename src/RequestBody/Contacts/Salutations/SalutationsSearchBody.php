@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Contacts\Salutations;
+namespace Aesislabs\BexioConnector\RequestBody\Contacts\Salutations;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBody;
 
 class SalutationsSearchBody extends AbstractSearchBody
 {

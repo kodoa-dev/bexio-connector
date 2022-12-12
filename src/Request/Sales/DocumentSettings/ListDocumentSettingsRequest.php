@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Sales\DocumentSettings;
+namespace Aesislabs\BexioConnector\Request\Sales\DocumentSettings;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/v2ListDocumentSettings
@@ -12,5 +12,5 @@ class ListDocumentSettingsRequest extends Request
     const API_PATH = '/kb_item_setting';
     const API_METHOD = 'GET';
 
-    const RESPONSE_CONTAINER = 'array<Fatpanda\BexioConnector\Container\Sales\DocumentSetting>';
+    const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\DocumentSetting>';
 }

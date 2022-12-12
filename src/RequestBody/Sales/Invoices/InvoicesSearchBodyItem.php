@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Invoices;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Invoices;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class InvoicesSearchBodyItem extends AbstractSearchBodyItem
 {

@@ -5,7 +5,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 require_once('credentials.php');
 
 // Initialize bexio connector once
-$bexioConnector = new \Fatpanda\BexioConnector\BexioConnector($token);
+$bexioConnector = new \Aesislabs\BexioConnector\BexioConnector($token);
 
 // Access bexio OOP-style
 $response = $bexioConnector->getContactsList();
@@ -26,7 +26,7 @@ if ($response->isSuccessResponse()) {
     var_dump($response->getCode() . ', ' . $response->getMessage());
 }
 
-$body = (new \Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody())
+$body = (new \Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody())
     ->setContactId(1)
     ->setUserId(1)
     ->setLogopaperId(1)
@@ -36,8 +36,8 @@ $body = (new \Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody())
     ->setPaymentTypeId(1)
     ->setHeader('Thank you very much for your inquiry. We would be pleased to make you the following offer:')
     ->setFooter('We hope that our offer meets your expectations and will be happy to answer your questions.')
-    ->setMwstType(\Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody::MWST_TYPE_INCLUDING_TAXES)
-    ->setMwstIsNet(\Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody::MWST_IS_NET_TAXES_WILL_BE_INCLUDED)
+    ->setMwstType(\Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody::MWST_TYPE_INCLUDING_TAXES)
+    ->setMwstIsNet(\Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoiceBody::MWST_IS_NET_TAXES_WILL_BE_INCLUDED)
     ->setShowPositionTaxes(false)
     ->setIsValidFrom(new DateTime('2019-06-24'))
     ->setIsValidTo(new DateTime('2019-07-24'))
@@ -50,11 +50,11 @@ if ($response->isSuccessResponse()) {
     var_dump($response->getCode() . ', ' . $response->getMessage());
 }
 
-$body = new \Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBody();
+$body = new \Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBody();
 $body->createItem()
-    ->setField(\Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBodyItem::SEARCH_FIELD_DOCUMENT_NR)
+    ->setField(\Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBodyItem::SEARCH_FIELD_DOCUMENT_NR)
     ->setValue('RE-0000')
-    ->setCriteria(\Fatpanda\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBodyItem::SEARCH_CRITERIA_LIKE)
+    ->setCriteria(\Aesislabs\BexioConnector\RequestBody\Sales\Invoices\InvoicesSearchBodyItem::SEARCH_CRITERIA_LIKE)
 ;
 
 $response = $bexioConnector->postSearchInvoices($body);
@@ -64,7 +64,7 @@ if ($response->isSuccessResponse()) {
     var_dump($response->getCode() . ', ' . $response->getMessage());
 }
 
-$query = new \Fatpanda\BexioConnector\RequestQuery\Sales\InvoicesRequestQuery();
+$query = new \Aesislabs\BexioConnector\RequestQuery\Sales\InvoicesRequestQuery();
 $query->setLimit(5);
 
 $response = $bexioConnector->postSearchInvoices($body, $query);

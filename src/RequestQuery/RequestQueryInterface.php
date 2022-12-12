@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Fatpanda\BexioConnector\RequestQuery;
+namespace Aesislabs\BexioConnector\RequestQuery;
 
 
 interface RequestQueryInterface

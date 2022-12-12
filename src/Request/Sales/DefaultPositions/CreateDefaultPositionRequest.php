@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Sales\DefaultPositions;
+namespace Aesislabs\BexioConnector\Request\Sales\DefaultPositions;
 
-use Fatpanda\BexioConnector\Message\Request;
-use Fatpanda\BexioConnector\Request\Sales\DocumentTypeInterface;
+use Aesislabs\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
 
 /**
  * https://docs.bexio.com/#operation/v2CreateDefaultPosition
@@ -13,5 +13,5 @@ class CreateDefaultPositionRequest extends Request implements DocumentTypeInterf
     const API_PATH = '/{kb_document_type}/{document_id}/kb_position_custom';
     const API_METHOD = 'POST';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Sales\DefaultPosition';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\DefaultPosition';
 }

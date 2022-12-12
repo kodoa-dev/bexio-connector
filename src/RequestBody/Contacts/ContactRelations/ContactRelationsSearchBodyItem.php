@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Contacts\ContactRelations;
+namespace Aesislabs\BexioConnector\RequestBody\Contacts\ContactRelations;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class ContactRelationsSearchBodyItem extends AbstractSearchBodyItem
 {

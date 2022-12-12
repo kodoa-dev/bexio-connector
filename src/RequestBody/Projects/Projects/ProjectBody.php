@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Projects\Projects;
+namespace Aesislabs\BexioConnector\RequestBody\Projects\Projects;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 

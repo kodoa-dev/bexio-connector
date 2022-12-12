@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Accounting\Taxes;
+namespace Aesislabs\BexioConnector\Request\Accounting\Taxes;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/ShowTax
@@ -13,5 +13,5 @@ class ShowTaxRequest extends Request
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Accounting\Tax';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Accounting\Tax';
 }

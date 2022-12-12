@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Container;
+namespace Aesislabs\BexioConnector\Container;
 
 interface ContainerInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Banking\BankAccounts;
+namespace Aesislabs\BexioConnector\Request\Banking\BankAccounts;
 
-use Fatpanda\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Message\Request;
 
 /**
  * https://docs.bexio.com/#operation/ListBankAccounts
@@ -13,5 +13,5 @@ class ListBankAccountsRequest extends Request
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 
-    const RESPONSE_CONTAINER = 'array<Fatpanda\BexioConnector\Container\Banking\BankAccount>';
+    const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Banking\BankAccount>';
 }

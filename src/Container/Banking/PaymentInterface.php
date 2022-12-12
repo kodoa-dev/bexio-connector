@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Fatpanda\BexioConnector\Container\Banking;
+namespace Aesislabs\BexioConnector\Container\Banking;
 
 
 interface PaymentInterface

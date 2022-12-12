@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Projects\Timesheets;
+namespace Aesislabs\BexioConnector\RequestBody\Projects\Timesheets;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBody;
 
 class TimesheetsSearchBody extends AbstractSearchBody
 {

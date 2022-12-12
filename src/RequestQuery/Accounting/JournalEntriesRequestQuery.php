@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Accounting;
+namespace Aesislabs\BexioConnector\RequestQuery\Accounting;
 
-use Fatpanda\BexioConnector\RequestQuery\LimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\LimitRequestQuery;
 
 class JournalEntriesRequestQuery extends LimitRequestQuery
 {

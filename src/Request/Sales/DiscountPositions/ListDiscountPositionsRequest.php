@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Sales\DiscountPositions;
+namespace Aesislabs\BexioConnector\Request\Sales\DiscountPositions;
 
-use Fatpanda\BexioConnector\Message\Request;
-use Fatpanda\BexioConnector\Request\Sales\DocumentTypeInterface;
+use Aesislabs\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
 
 /**
  * https://docs.bexio.com/#operation/v2ListDiscountPositions
@@ -13,5 +13,5 @@ class ListDiscountPositionsRequest extends Request implements DocumentTypeInterf
     const API_PATH = '/{kb_document_type}/{document_id}/kb_position_discount';
     const API_METHOD = 'GET';
 
-    const RESPONSE_CONTAINER = 'array<Fatpanda\BexioConnector\Container\Sales\DiscountPosition>';
+    const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\DiscountPosition>';
 }

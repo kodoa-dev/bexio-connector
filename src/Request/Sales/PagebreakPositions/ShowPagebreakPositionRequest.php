@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\Request\Sales\PagebreakPositions;
+namespace Aesislabs\BexioConnector\Request\Sales\PagebreakPositions;
 
-use Fatpanda\BexioConnector\Message\Request;
-use Fatpanda\BexioConnector\Request\Sales\DocumentTypeInterface;
+use Aesislabs\BexioConnector\Message\Request;
+use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
 
 /**
  * https://docs.bexio.com/#operation/v2ShowPagebreakPosition
@@ -13,5 +13,5 @@ class ShowPagebreakPositionRequest extends Request implements DocumentTypeInterf
     const API_PATH = '/{kb_document_type}/{document_id}/kb_position_pagebreak/{position_id}';
     const API_METHOD = 'GET';
 
-    const RESPONSE_CONTAINER = 'Fatpanda\BexioConnector\Container\Sales\PagebreakPosition';
+    const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\PagebreakPosition';
 }

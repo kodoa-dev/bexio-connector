@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Contacts;
+namespace Aesislabs\BexioConnector\RequestQuery\Contacts;
 
-use Fatpanda\BexioConnector\RequestQuery\OrderLimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\OrderLimitRequestQuery;
 
 class ContactGroupsRequestQuery extends OrderLimitRequestQuery
 {

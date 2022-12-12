@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Accounting\CalendarYears;
+namespace Aesislabs\BexioConnector\RequestBody\Accounting\CalendarYears;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBody;
 
 class CalendarYearsSearchBody extends AbstractSearchBody
 {

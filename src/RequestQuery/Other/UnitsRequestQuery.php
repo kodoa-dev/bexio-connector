@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Other;
+namespace Aesislabs\BexioConnector\RequestQuery\Other;
 
-use Fatpanda\BexioConnector\RequestQuery\LimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\LimitRequestQuery;
 
 class UnitsRequestQuery extends LimitRequestQuery
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Other\Tasks;
+namespace Aesislabs\BexioConnector\RequestBody\Other\Tasks;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class TasksSearchBodyItem extends AbstractSearchBodyItem
 {

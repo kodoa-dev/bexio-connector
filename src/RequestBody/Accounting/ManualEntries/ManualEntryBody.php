@@ -1,9 +1,9 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Accounting\ManualEntries;
+namespace Aesislabs\BexioConnector\RequestBody\Accounting\ManualEntries;
 
 use DateTime;
-use Fatpanda\BexioConnector\RequestBody\AbstractBody;
+use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -37,7 +37,7 @@ class ManualEntryBody extends AbstractBody
     /**
      * @var array|ManualEntryItemBody[]
      * @SerializedName("entries")
-     * @Type("array<Fatpanda\BexioConnector\RequestBody\Accounting\ManualEntries\ManualEntryItemBody>")
+     * @Type("array<Aesislabs\BexioConnector\RequestBody\Accounting\ManualEntries\ManualEntryItemBody>")
      */
     protected $entries;
 

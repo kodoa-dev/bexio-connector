@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestQuery\Sales;
+namespace Aesislabs\BexioConnector\RequestQuery\Sales;
 
-use Fatpanda\BexioConnector\RequestQuery\LimitRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\LimitRequestQuery;
 
 class TextPositionsRequestQuery extends LimitRequestQuery
 {

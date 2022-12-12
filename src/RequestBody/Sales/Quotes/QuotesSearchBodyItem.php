@@ -1,8 +1,8 @@
 <?php
 
-namespace Fatpanda\BexioConnector\RequestBody\Sales\Quotes;
+namespace Aesislabs\BexioConnector\RequestBody\Sales\Quotes;
 
-use Fatpanda\BexioConnector\RequestBody\AbstractSearchBodyItem;
+use Aesislabs\BexioConnector\RequestBody\AbstractSearchBodyItem;
 
 class QuotesSearchBodyItem extends AbstractSearchBodyItem
 {
