@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListBusinessActivitiesRequest extends Request
 {
-    const API_PATH = '/client_service';
+    const API_PATH = '/2.0/client_service';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\BusinessActivity>';

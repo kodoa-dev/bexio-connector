@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListJournalEntriesRequest extends Request
 {
-    const API_PATH = '/accounting/journal';
+    const API_PATH = '/2.0/accounting/journal';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

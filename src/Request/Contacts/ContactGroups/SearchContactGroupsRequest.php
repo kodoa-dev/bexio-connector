@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchContactGroupsRequest extends Request
 {
-    const API_PATH = '/contact_group/search';
+    const API_PATH = '/2.0/contact_group/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Contacts\ContactGroup>';

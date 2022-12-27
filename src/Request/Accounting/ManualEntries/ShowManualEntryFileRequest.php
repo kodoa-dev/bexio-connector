@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowManualEntryFileRequest extends Request
 {
-    const API_PATH = '/accounting/manual_entries/{manual_entry_id}/entries/{entry_id}/files/{file_id}';
+    const API_PATH = '/2.0/accounting/manual_entries/{manual_entry_id}/entries/{entry_id}/files/{file_id}';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

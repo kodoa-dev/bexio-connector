@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListPaymentTypesRequest extends Request
 {
-    const API_PATH = '/payment_type';
+    const API_PATH = '/2.0/payment_type';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\PaymentType>';

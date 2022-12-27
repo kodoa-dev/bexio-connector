@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListLanguagesRequest extends Request
 {
-    const API_PATH = '/language';
+    const API_PATH = '/2.0/language';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Language>';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchNotesRequest extends Request
 {
-    const API_PATH = '/note/search';
+    const API_PATH = '/2.0/note/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Note>';

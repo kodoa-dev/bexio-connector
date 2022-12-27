@@ -155,6 +155,11 @@ use Aesislabs\BexioConnector\Request\Projects\Timesheets\ListTimesheetsRequest;
 use Aesislabs\BexioConnector\Request\Projects\Timesheets\ListTimesheetStatusRequest;
 use Aesislabs\BexioConnector\Request\Projects\Timesheets\SearchTimesheetsRequest;
 use Aesislabs\BexioConnector\Request\Projects\Timesheets\ShowTimesheetRequest;
+use Aesislabs\BexioConnector\Request\Purchase\Bills\CreateBillRequest;
+use Aesislabs\BexioConnector\Request\Purchase\Bills\DeleteBillRequest;
+use Aesislabs\BexioConnector\Request\Purchase\Bills\EditBillRequest;
+use Aesislabs\BexioConnector\Request\Purchase\Bills\ListBillsRequest;
+use Aesislabs\BexioConnector\Request\Purchase\Bills\ShowBillRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\CreateCommentRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\ListCommentsRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\ShowCommentRequest;
@@ -297,6 +302,7 @@ use Aesislabs\BexioConnector\RequestBody\Projects\Projects\ProjectBody;
 use Aesislabs\BexioConnector\RequestBody\Projects\Projects\ProjectsSearchBody;
 use Aesislabs\BexioConnector\RequestBody\Projects\Timesheets\TimesheetBody;
 use Aesislabs\BexioConnector\RequestBody\Projects\Timesheets\TimesheetsSearchBody;
+use Aesislabs\BexioConnector\RequestBody\Purchase\Bills\BillBody;
 use Aesislabs\BexioConnector\RequestBody\RequestBodyInterface;
 use Aesislabs\BexioConnector\RequestBody\Sales\Comments\CommentBody;
 use Aesislabs\BexioConnector\RequestBody\Sales\DefaultPositions\DefaultPositionBody;
@@ -360,6 +366,7 @@ use Aesislabs\BexioConnector\RequestQuery\Projects\ProjectStatusesRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Projects\ProjectTypesRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Projects\TimesheetsRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Projects\TimesheetStatusRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\Purchase\BillsRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\RequestQueryInterface;
 use Aesislabs\BexioConnector\RequestQuery\Sales\CommentsRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Sales\DefaultPositionsRequestQuery;
@@ -1474,6 +1481,45 @@ class BexioConnector
     {
         $this->pathParameters['title_id'] = $titleId;
         $request = new DeleteTitleRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    // Purchase
+    // Purchase\Bills
+
+    public function getBillsList(?BillsRequestQuery $query = null): Response
+    {
+        $this->query = $query;
+        $request = new ListBillsRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    public function postBill(BillBody $body): Response
+    {
+        $this->body = $body;
+        $request = new CreateBillRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    public function getBill(int $billId): Response
+    {
+        $this->pathParameters['id'] = $billId;
+        $request = new ShowBillRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    public function putBill(int $billId, BillBody $body): Response
+    {
+        $this->pathParameters['id'] = $billId;
+        $this->body = $body;
+        $request = new EditBillRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    public function deleteBill(int $billId): Response
+    {
+        $this->pathParameters['id'] = $billId;
+        $request = new DeleteBillRequest(...$this->getRequestParameters());
         return $request->execute();
     }
 

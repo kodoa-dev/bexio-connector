@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateContactRelationRequest extends Request
 {
-    const API_PATH = '/contact_relation';
+    const API_PATH = '/2.0/contact_relation';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Contacts\ContactRelation';

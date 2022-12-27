@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowNoteRequest extends Request
 {
-    const API_PATH = '/note/{note_id}';
+    const API_PATH = '/2.0/note/{note_id}';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Note';

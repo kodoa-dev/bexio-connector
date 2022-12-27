@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowBusinessYearRequest extends Request
 {
-    const API_PATH = '/accounting/business_years/{business_year_id}';
+    const API_PATH = '/2.0/accounting/business_years/{business_year_id}';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

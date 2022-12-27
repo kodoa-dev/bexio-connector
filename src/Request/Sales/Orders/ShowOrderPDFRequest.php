@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowOrderPDFRequest extends Request
 {
-    const API_PATH = '/kb_order/{order_id}/pdf';
+    const API_PATH = '/2.0/kb_order/{order_id}/pdf';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\File';

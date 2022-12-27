@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchQuotesRequest extends Request
 {
-    const API_PATH = '/kb_offer/search';
+    const API_PATH = '/2.0/kb_offer/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\Quote>';

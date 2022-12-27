@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateCurrencyRequest extends Request
 {
-    const API_PATH = '/currencies';
+    const API_PATH = '/2.0/currencies';
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 

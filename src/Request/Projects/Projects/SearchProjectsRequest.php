@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchProjectsRequest extends Request
 {
-    const API_PATH = '/pr_project/search';
+    const API_PATH = '/2.0/pr_project/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\Project>';

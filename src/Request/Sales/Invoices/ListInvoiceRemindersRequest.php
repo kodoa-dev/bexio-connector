@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListInvoiceRemindersRequest extends Request
 {
-    const API_PATH = '/kb_invoice/{invoice_id}/kb_reminder';
+    const API_PATH = '/2.0/kb_invoice/{invoice_id}/kb_reminder';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\InvoiceReminder>';

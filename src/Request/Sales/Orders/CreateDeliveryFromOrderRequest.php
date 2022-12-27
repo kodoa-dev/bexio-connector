@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateDeliveryFromOrderRequest extends Request
 {
-    const API_PATH = '/kb_order/{order_id}/delivery';
+    const API_PATH = '/2.0/kb_order/{order_id}/delivery';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\Delivery';

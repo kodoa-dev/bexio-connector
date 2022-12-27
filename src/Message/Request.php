@@ -17,7 +17,6 @@ abstract class Request
 {
     const RESPONSE_CONTAINER = '';
     const ROOT_URL = 'https://api.bexio.com';
-    const API_VERSION_URL = '/2.0';
 
     /**
      * @var ClientInterface
@@ -137,7 +136,7 @@ abstract class Request
      */
     protected function getUri(): string
     {
-        $uri = static::ROOT_URL . static::API_VERSION_URL . static::API_PATH;
+        $uri = static::ROOT_URL . static::API_PATH;
 
         foreach ($this->pathParameters as $name => $value) {
             $uri = str_replace("{{$name}}", $value, $uri);

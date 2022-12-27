@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateCalendarYearRequest extends Request
 {
-    const API_PATH = '/accounting/calendar_years';
+    const API_PATH = '/2.0/accounting/calendar_years';
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 

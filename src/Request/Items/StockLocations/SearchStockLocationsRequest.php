@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchStockLocationsRequest extends Request
 {
-    const API_PATH = '/stock/search';
+    const API_PATH = '/2.0/stock/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Items\StockLocation>';

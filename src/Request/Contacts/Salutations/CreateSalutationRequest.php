@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateSalutationRequest extends Request
 {
-    const API_PATH = '/salutation';
+    const API_PATH = '/2.0/salutation';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Contacts\Salutation';

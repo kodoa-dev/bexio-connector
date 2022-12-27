@@ -10,7 +10,7 @@ use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
  */
 class CreateCommentRequest extends Request implements DocumentTypeInterface
 {
-    const API_PATH = '/{kb_document_type}/{document_id}/comment';
+    const API_PATH = '/2.0/{kb_document_type}/{document_id}/comment';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\Comment';

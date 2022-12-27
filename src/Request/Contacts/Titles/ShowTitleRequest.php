@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowTitleRequest extends Request
 {
-    const API_PATH = '/title/{title_id}';
+    const API_PATH = '/2.0/title/{title_id}';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Contacts\Title';

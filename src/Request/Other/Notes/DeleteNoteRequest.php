@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteNoteRequest extends Request
 {
-    const API_PATH = '/note/{country_id}';
+    const API_PATH = '/2.0/note/{country_id}';
     const API_METHOD = 'DELETE';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowQuotePDFRequest extends Request
 {
-    const API_PATH = '/kb_offer/{quote_id}/pdf';
+    const API_PATH = '/2.0/kb_offer/{quote_id}/pdf';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\File';

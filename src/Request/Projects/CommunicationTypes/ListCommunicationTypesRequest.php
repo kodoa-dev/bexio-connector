@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListCommunicationTypesRequest extends Request
 {
-    const API_PATH = '/communication_kind';
+    const API_PATH = '/2.0/communication_kind';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\CommunicationType>';

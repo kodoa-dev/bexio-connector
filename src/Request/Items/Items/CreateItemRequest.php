@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateItemRequest extends Request
 {
-    const API_PATH = '/article';
+    const API_PATH = '/2.0/article';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Items\Item';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateManualEntryRequest extends Request
 {
-    const API_PATH = '/accounting/manual_entries';
+    const API_PATH = '/2.0/accounting/manual_entries';
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 

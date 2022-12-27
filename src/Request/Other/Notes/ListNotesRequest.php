@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListNotesRequest extends Request
 {
-    const API_PATH = '/note';
+    const API_PATH = '/2.0/note';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Note>';

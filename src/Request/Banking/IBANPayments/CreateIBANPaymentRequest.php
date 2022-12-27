@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateIBANPaymentRequest extends Request
 {
-    const API_PATH = '/banking/bank_accounts/{bank_account_id}/iban_payments';
+    const API_PATH = '/2.0/banking/bank_accounts/{bank_account_id}/iban_payments';
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 

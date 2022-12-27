@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateInvoiceFromQuoteRequest extends Request
 {
-    const API_PATH = '/kb_offer/{quote_id}/invoice';
+    const API_PATH = '/2.0/kb_offer/{quote_id}/invoice';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\Invoice';

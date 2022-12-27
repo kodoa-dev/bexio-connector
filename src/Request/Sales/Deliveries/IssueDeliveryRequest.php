@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class IssueDeliveryRequest extends Request
 {
-    const API_PATH = '/kb_delivery/{delivery_id}/issue';
+    const API_PATH = '/2.0/kb_delivery/{delivery_id}/issue';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class EditProjectRequest extends Request
 {
-    const API_PATH = '/pr_project/{project_id}';
+    const API_PATH = '/2.0/pr_project/{project_id}';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Projects\Project';

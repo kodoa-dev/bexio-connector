@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateTaskRequest extends Request
 {
-    const API_PATH = '/task';
+    const API_PATH = '/2.0/task';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Task';

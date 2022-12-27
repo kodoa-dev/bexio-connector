@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchTasksRequest extends Request
 {
-    const API_PATH = '/task/search';
+    const API_PATH = '/2.0/task/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Task>';

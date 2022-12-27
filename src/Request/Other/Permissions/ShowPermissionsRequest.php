@@ -10,7 +10,7 @@ use Aesislabs\BexioConnector\Message\Request;
 class ShowPermissionsRequest extends Request
 {
     const API_VERSION_URL = '/3.0';
-    const API_PATH = '/permissions';
+    const API_PATH = '/2.0/permissions';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Permissions';

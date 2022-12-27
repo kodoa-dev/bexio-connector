@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CancelBankPaymentRequest extends Request
 {
-    const API_PATH = '/banking/payments/{payment_id}/cancel';
+    const API_PATH = '/2.0/banking/payments/{payment_id}/cancel';
     const API_METHOD = 'POST';
     const API_VERSION_URL = '/3.0';
 

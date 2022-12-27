@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListTimesheetsRequest extends Request
 {
-    const API_PATH = '/timesheet';
+    const API_PATH = '/2.0/timesheet';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\Timesheet>';

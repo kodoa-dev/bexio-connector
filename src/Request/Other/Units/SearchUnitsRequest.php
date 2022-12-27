@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchUnitsRequest extends Request
 {
-    const API_PATH = '/unit/search';
+    const API_PATH = '/2.0/unit/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Unit>';

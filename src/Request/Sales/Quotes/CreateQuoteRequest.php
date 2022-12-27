@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateQuoteRequest extends Request
 {
-    const API_PATH = '/kb_offer';
+    const API_PATH = '/2.0/kb_offer';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\Quote';

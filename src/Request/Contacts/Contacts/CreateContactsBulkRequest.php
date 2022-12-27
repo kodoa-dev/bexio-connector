@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateContactsBulkRequest extends Request
 {
-    const API_PATH = '/contact/_bulk_create';
+    const API_PATH = '/2.0/contact/_bulk_create';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Contacts\Contact>';

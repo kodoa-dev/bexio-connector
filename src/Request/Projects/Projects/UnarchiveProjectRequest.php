@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class UnarchiveProjectRequest extends Request
 {
-    const API_PATH = '/pr_project/{project_id}/reactivate';
+    const API_PATH = '/2.0/pr_project/{project_id}/reactivate';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

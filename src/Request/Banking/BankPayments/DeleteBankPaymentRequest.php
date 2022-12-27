@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteBankPaymentRequest extends Request
 {
-    const API_PATH = '/banking/payments/{payment_id}';
+    const API_PATH = '/2.0/banking/payments/{payment_id}';
     const API_METHOD = 'DELETE';
     const API_VERSION_URL = '/3.0';
 

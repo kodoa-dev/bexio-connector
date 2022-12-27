@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListProjectStatusRequest extends Request
 {
-    const API_PATH = '/pr_project_state';
+    const API_PATH = '/2.0/pr_project_state';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Projects\ProjectStatus>';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowUnitRequest extends Request
 {
-    const API_PATH = '/unit/{unit_id}';
+    const API_PATH = '/2.0/unit/{unit_id}';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Unit';

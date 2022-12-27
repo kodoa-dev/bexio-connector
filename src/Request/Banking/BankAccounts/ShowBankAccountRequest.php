@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowBankAccountRequest extends Request
 {
-    const API_PATH = '/banking/accounts/{bank_account_id}';
+    const API_PATH = '/2.0/banking/accounts/{bank_account_id}';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

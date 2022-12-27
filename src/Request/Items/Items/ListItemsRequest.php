@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListItemsRequest extends Request
 {
-    const API_PATH = '/article';
+    const API_PATH = '/2.0/article';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Items\Item>';

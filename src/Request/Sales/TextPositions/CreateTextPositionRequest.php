@@ -10,7 +10,7 @@ use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
  */
 class CreateTextPositionRequest extends Request implements DocumentTypeInterface
 {
-    const API_PATH = '/{kb_document_type}/{document_id}/kb_position_text';
+    const API_PATH = '/2.0/{kb_document_type}/{document_id}/kb_position_text';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\TextPosition';

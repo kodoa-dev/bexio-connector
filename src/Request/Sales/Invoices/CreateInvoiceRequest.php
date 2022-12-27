@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class CreateInvoiceRequest extends Request
 {
-    const API_PATH = '/kb_invoice';
+    const API_PATH = '/2.0/kb_invoice';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\Invoice';

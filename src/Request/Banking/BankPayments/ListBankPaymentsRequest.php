@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListBankPaymentsRequest extends Request
 {
-    const API_PATH = '/banking/payments';
+    const API_PATH = '/2.0/banking/payments';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

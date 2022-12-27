@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class EditCountryRequest extends Request
 {
-    const API_PATH = '/country/{country_id}';
+    const API_PATH = '/2.0/country/{country_id}';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Other\Country';

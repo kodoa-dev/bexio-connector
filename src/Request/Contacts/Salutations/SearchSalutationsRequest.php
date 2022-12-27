@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchSalutationsRequest extends Request
 {
-    const API_PATH = '/salutation/search';
+    const API_PATH = '/2.0/salutation/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Contacts\Salutation>';

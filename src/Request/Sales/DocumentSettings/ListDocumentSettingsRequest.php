@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListDocumentSettingsRequest extends Request
 {
-    const API_PATH = '/kb_item_setting';
+    const API_PATH = '/2.0/kb_item_setting';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\DocumentSetting>';

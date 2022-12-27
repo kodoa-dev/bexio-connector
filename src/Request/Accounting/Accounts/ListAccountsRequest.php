@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListAccountsRequest extends Request
 {
-    const API_PATH = '/accounts';
+    const API_PATH = '/2.0/accounts';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Accounting\Account>';

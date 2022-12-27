@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListOrdersRequest extends Request
 {
-    const API_PATH = '/kb_order';
+    const API_PATH = '/2.0/kb_order';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\Order>';

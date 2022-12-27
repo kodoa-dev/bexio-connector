@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteInvoiceRequest extends Request
 {
-    const API_PATH = '/kb_invoice/{invoice_id}';
+    const API_PATH = '/2.0/kb_invoice/{invoice_id}';
     const API_METHOD = 'DELETE';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

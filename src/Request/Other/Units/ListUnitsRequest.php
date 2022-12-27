@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListUnitsRequest extends Request
 {
-    const API_PATH = '/unit';
+    const API_PATH = '/2.0/unit';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Unit>';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowNextReferenceNumberRequest extends Request
 {
-    const API_PATH = '/accounting/manual_entries/next_ref_nr';
+    const API_PATH = '/2.0/accounting/manual_entries/next_ref_nr';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

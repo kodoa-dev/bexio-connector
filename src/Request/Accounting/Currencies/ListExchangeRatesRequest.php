@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListExchangeRatesRequest extends Request
 {
-    const API_PATH = '/currencies/{currency_id}/exchange_rates';
+    const API_PATH = '/2.0/currencies/{currency_id}/exchange_rates';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

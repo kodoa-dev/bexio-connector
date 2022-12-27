@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class MarkAsSentInvoiceReminderRequest extends Request
 {
-    const API_PATH = '/kb_invoice/{invoice_id}/kb_reminder/{reminder_id}/mark_as_sent';
+    const API_PATH = '/2.0/kb_invoice/{invoice_id}/kb_reminder/{reminder_id}/mark_as_sent';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

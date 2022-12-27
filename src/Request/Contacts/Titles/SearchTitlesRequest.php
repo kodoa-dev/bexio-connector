@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchTitlesRequest extends Request
 {
-    const API_PATH = '/title/search';
+    const API_PATH = '/2.0/title/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Contacts\Title>';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListBusinessYearsRequest extends Request
 {
-    const API_PATH = '/accounting/business_years';
+    const API_PATH = '/2.0/accounting/business_years';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

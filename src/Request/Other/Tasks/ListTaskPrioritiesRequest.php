@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListTaskPrioritiesRequest extends Request
 {
-    const API_PATH = '/todo_priority';
+    const API_PATH = '/2.0/todo_priority';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\TaskPriority>';

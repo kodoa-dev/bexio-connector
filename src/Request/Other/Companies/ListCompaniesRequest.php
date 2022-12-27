@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListCompaniesRequest extends Request
 {
-    const API_PATH = '/company_profile';
+    const API_PATH = '/2.0/company_profile';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Company>';

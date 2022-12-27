@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class UpdateCurrencyRequest extends Request
 {
-    const API_PATH = '/currencies/{currency_id}';
+    const API_PATH = '/2.0/currencies/{currency_id}';
     const API_METHOD = 'PATCH';
     const API_VERSION_URL = '/3.0';
 

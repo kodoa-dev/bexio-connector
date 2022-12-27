@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListInvoicePaymentsRequest extends Request
 {
-    const API_PATH = '/kb_invoice/{invoice_id}/payment';
+    const API_PATH = '/2.0/kb_invoice/{invoice_id}/payment';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Sales\InvoicePayment>';

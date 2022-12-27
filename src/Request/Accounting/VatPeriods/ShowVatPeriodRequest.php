@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowVatPeriodRequest extends Request
 {
-    const API_PATH = '/accounting/vat_periods/{vat_period_id}';
+    const API_PATH = '/2.0/accounting/vat_periods/{vat_period_id}';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

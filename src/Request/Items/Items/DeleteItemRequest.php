@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteItemRequest extends Request
 {
-    const API_PATH = '/article/{article_id}';
+    const API_PATH = '/2.0/article/{article_id}';
     const API_METHOD = 'DELETE';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

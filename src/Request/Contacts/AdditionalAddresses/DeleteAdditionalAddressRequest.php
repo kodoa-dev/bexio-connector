@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteAdditionalAddressRequest extends Request
 {
-    const API_PATH = '/contact/{contact_id}/additional_address/{additional_address_id}';
+    const API_PATH = '/2.0/contact/{contact_id}/additional_address/{additional_address_id}';
     const API_METHOD = 'DELETE';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';

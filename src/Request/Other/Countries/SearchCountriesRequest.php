@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class SearchCountriesRequest extends Request
 {
-    const API_PATH = '/country/search';
+    const API_PATH = '/2.0/country/search';
     const API_METHOD = 'POST';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\Country>';

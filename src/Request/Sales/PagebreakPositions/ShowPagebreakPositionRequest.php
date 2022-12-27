@@ -10,7 +10,7 @@ use Aesislabs\BexioConnector\Request\Sales\DocumentTypeInterface;
  */
 class ShowPagebreakPositionRequest extends Request implements DocumentTypeInterface
 {
-    const API_PATH = '/{kb_document_type}/{document_id}/kb_position_pagebreak/{position_id}';
+    const API_PATH = '/2.0/{kb_document_type}/{document_id}/kb_position_pagebreak/{position_id}';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\PagebreakPosition';

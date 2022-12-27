@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ShowOrderRepetitionRequest extends Request
 {
-    const API_PATH = '/kb_order/{order_id}/repetition';
+    const API_PATH = '/2.0/kb_order/{order_id}/repetition';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Sales\OrderRepetition';

@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListTaskStatusesRequest extends Request
 {
-    const API_PATH = '/todo_status';
+    const API_PATH = '/2.0/todo_status';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Other\TaskStatus>';

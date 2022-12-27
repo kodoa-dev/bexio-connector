@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListAccountGroupsRequest extends Request
 {
-    const API_PATH = '/account_groups';
+    const API_PATH = '/2.0/account_groups';
     const API_METHOD = 'GET';
 
     const RESPONSE_CONTAINER = 'array<Aesislabs\BexioConnector\Container\Accounting\AccountGroup>';

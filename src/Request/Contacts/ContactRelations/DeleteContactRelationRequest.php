@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class DeleteContactRelationRequest extends Request
 {
-    const API_PATH = '/contact_relation/{contact_relation_id}';
+    const API_PATH = '/2.0/contact_relation/{contact_relation_id}';
     const API_METHOD = 'DELETE';
 
     const RESPONSE_CONTAINER = 'Aesislabs\BexioConnector\Container\Success';
