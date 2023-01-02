@@ -16,11 +16,10 @@ class ItemPosition implements ContainerInterface
     protected $id;
 
     /**
-     * @var string
      * @SerializedName("amount")
      * @Type("string")
      */
-    protected $amount;
+    protected ?string $amount = null;
 
     /**
      * @var integer
@@ -37,11 +36,10 @@ class ItemPosition implements ContainerInterface
     protected $accountId;
 
     /**
-     * @var string
      * @SerializedName("unit_name")
      * @Type("string")
      */
-    protected $unitName;
+    protected ?string $unitName = null;
 
     /**
      * @var integer
@@ -51,11 +49,10 @@ class ItemPosition implements ContainerInterface
     protected $taxId;
 
     /**
-     * @var string
      * @SerializedName("tax_value")
      * @Type("string")
      */
-    protected $taxValue;
+    protected ?string $taxValue = null;
 
     /**
      * @var string
@@ -65,11 +62,10 @@ class ItemPosition implements ContainerInterface
     protected $text;
 
     /**
-     * @var string
      * @SerializedName("unit_price")
      * @Type("string")
      */
-    protected $unitPrice;
+    protected ?string $unitPrice = null;
 
     /**
      * @var string
@@ -79,11 +75,10 @@ class ItemPosition implements ContainerInterface
     protected $discountInPercent;
 
     /**
-     * @var string
      * @SerializedName("position_total")
      * @Type("string")
      */
-    protected $positionTotal;
+    protected ?string $positionTotal = null;
 
     /**
      * @var string
@@ -125,139 +120,88 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("parent_id")
      * @Type("integer")
      */
-    protected $parentId;
+    protected ?int $parentId;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
 
-    /**
-     * @return int
-     */
     public function getUnitId(): int
     {
         return $this->unitId;
     }
 
-    /**
-     * @return int
-     */
     public function getAccountId(): int
     {
         return $this->accountId;
     }
 
-    /**
-     * @return string
-     */
-    public function getUnitName(): string
+    public function getUnitName(): ?string
     {
         return $this->unitName;
     }
 
-    /**
-     * @return int
-     */
     public function getTaxId(): int
     {
         return $this->taxId;
     }
 
-    /**
-     * @return string
-     */
-    public function getTaxValue(): string
+    public function getTaxValue(): ?string
     {
         return $this->taxValue;
     }
 
-    /**
-     * @return string
-     */
-    public function getText(): string
+    public function getText(): ?string
     {
         return $this->text;
     }
 
-    /**
-     * @return string
-     */
-    public function getUnitPrice(): string
+    public function getUnitPrice(): ?string
     {
         return $this->unitPrice;
     }
 
-    /**
-     * @return string
-     */
-    public function getDiscountInPercent(): string
+    public function getDiscountInPercent(): ?string
     {
         return $this->discountInPercent;
     }
 
-    /**
-     * @return string
-     */
-    public function getPositionTotal(): string
+    public function getPositionTotal(): ?string
     {
         return $this->positionTotal;
     }
 
-    /**
-     * @return string
-     */
     public function getPos(): string
     {
         return $this->pos;
     }
 
-    /**
-     * @return int
-     */
     public function getInternalPos(): int
     {
-        return $this->internalPos;
+        return $this->internalPos ?? 0;
     }
 
-    /**
-     * @return bool
-     */
     public function isOptional(): bool
     {
         return $this->isOptional;
     }
 
-    /**
-     * @return int
-     */
     public function getArticleId(): int
     {
         return $this->articleId;
     }
 
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @return int|null
-     */
     public function getParentId(): ?int
     {
         return $this->parentId;

@@ -108,12 +108,35 @@ abstract class Request
         if (!in_array($response->getStatusCode(), [200, 201])) {
             return (new ErrorResponse())
                 ->setCode($response->getStatusCode())
-                ->setMessage($response->getReasonPhrase())
-                ;
+                ->setMessage($response->getReasonPhrase());
         }
 
+        $datas = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+        $paging = [];
+
+        if (array_key_exists('paging', $datas)) {
+            $paging = $datas['paging'];
+            $datas = $datas['data'];
+        }
+
+        if (array_key_exists('page_count', $paging)) {
+            for ($i = 2; $i <= $paging['page_count']; $i++) {
+                $this->query->setPage($i);
+                $newResponse = $this->client->request(
+                    $this->getMethod(),
+                    $this->getUri(),
+                    $this->getOptions()
+                );
+
+                $newDatas = json_decode($newResponse->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+                $datas = array_merge($datas, $newDatas['data']);
+            }
+        }
+
+        $datas = json_encode($datas, JSON_THROW_ON_ERROR);
+
         /** @var ContainerInterface $container */
-        $container = $this->getSerializer()->deserialize($response->getBody(), static::RESPONSE_CONTAINER, 'json');
+        $container = $this->getSerializer()->deserialize($datas, static::RESPONSE_CONTAINER, 'json');
 
         return (new SuccessResponse())->setBody($container);
     }
@@ -167,7 +190,7 @@ abstract class Request
     protected function getHeaders(): array
     {
         return [
-            'Accept'        => 'application/json',
+            'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $this->getToken(),
         ];
     }

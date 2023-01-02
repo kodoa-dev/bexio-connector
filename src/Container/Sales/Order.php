@@ -248,6 +248,13 @@ class Order implements ContainerInterface
     protected $taxs;
 
     /**
+     * @var array
+     * @SerializedName("positions")
+     * @Type("array<Aesislabs\BexioConnector\Container\Sales\ItemPosition>")
+     */
+    protected $positions;
+
+    /**
      * @var string|null
      * @SerializedName("network_link")
      * @Type("string")
@@ -516,6 +523,14 @@ class Order implements ContainerInterface
     public function getTaxs(): array
     {
         return $this->taxs;
+    }
+
+    /**
+     * @return array|ItemPosition[]
+     */
+    public function getPositions(): array
+    {
+        return $this->positions;
     }
 
     /**

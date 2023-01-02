@@ -3,35 +3,107 @@
 namespace Aesislabs\BexioConnector\Container\Purchase;
 
 use Aesislabs\BexioConnector\Container\ContainerInterface;
+use JMS\Serializer\Annotation as Serializer;
 use Ramsey\Uuid\UuidInterface;
 
 class Bill implements ContainerInterface
 {
-    protected UuidInterface $id;
-    protected \DateTimeImmutable $createdAt;
+    /**
+     * @Serializer\Type("string")
+     */
+    protected string $id;
+
+    /**
+     * @Serializer\Type("DateTime")
+     */
+    protected \DateTime $createdAt;
+
+    /**
+     * @Serializer\Type("string")
+     */
     protected string $documentNo;
+
+    /**
+     * @Serializer\Type("string")
+     */
     protected string $status;
-    protected string $vendorRef;
-    protected string $firstnameSuffix;
+
+    /**
+     * @Serializer\Type("string")
+     */
+    protected ?string $vendorRef;
+
+    /**
+     * @Serializer\Type("string")
+     */
+    protected ?string $firstnameSuffix;
+
+    /**
+     * @Serializer\Type("string")
+     */
     protected string $lastnameCompany;
+
+    /**
+     * @Serializer\Type("string")
+     */
     protected string $vendor;
-    protected string $title;
+
+    /**
+     * @Serializer\Type("string")
+     */
+    protected ?string $title;
+
+    /**
+     * @Serializer\Type("string")
+     */
     protected string $currencyCode;
+
+    /**
+     * @Serializer\Type("float")
+     */
     protected float $pendingAmount;
+
+    /**
+     * @Serializer\Type("float")
+     */
     protected float $net;
+
+    /**
+     * @Serializer\Type("float")
+     */
     protected float $gross;
-    protected \DateTimeImmutable $billDate;
-    protected \DateTimeImmutable $dueDate;
+
+    /**
+     * @Serializer\Type("DateTime<'Y-m-d'>")
+     */
+    protected \DateTime $billDate;
+
+    /**
+     * @Serializer\Type("DateTime<'Y-m-d'>")
+     */
+    protected \DateTime $dueDate;
+
+    /**
+     * @Serializer\Type("bool")
+     */
     protected bool $overdue;
+
+    /**
+     * @Serializer\Type("array")
+     */
     protected array $bookingAccountIds;
+
+    /**
+     * @Serializer\Type("array")
+     */
     protected array $attachmentIds;
 
-    public function getId(): UuidInterface
+    public function getId(): string
     {
         return $this->id;
     }
 
-    public function getCreatedAt(): \DateTimeImmutable
+    public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;
     }
@@ -46,12 +118,12 @@ class Bill implements ContainerInterface
         return $this->status;
     }
 
-    public function getVendorRef(): string
+    public function getVendorRef(): ?string
     {
         return $this->vendorRef;
     }
 
-    public function getFirstnameSuffix(): string
+    public function getFirstnameSuffix(): ?string
     {
         return $this->firstnameSuffix;
     }
@@ -66,7 +138,7 @@ class Bill implements ContainerInterface
         return $this->vendor;
     }
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -91,12 +163,12 @@ class Bill implements ContainerInterface
         return $this->gross;
     }
 
-    public function getBillDate(): \DateTimeImmutable
+    public function getBillDate(): \DateTime
     {
         return $this->billDate;
     }
 
-    public function getDueDate(): \DateTimeImmutable
+    public function getDueDate(): \DateTime
     {
         return $this->dueDate;
     }
