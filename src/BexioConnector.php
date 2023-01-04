@@ -431,7 +431,7 @@ class BexioConnector
         $this->token = $token;
 
         $this->client = new Client([
-            'timeout'  => 5,
+            'timeout'  => 20,
         ]);
     }
 
@@ -1579,7 +1579,7 @@ class BexioConnector
      */
     public function putItem(int $itemId, ItemBody $body): Response
     {
-        $this->pathParameters['item_id'] = $itemId;
+        $this->pathParameters['article_id'] = $itemId;
         $this->body = $body;
         $request = new EditItemRequest(...$this->getRequestParameters());
         return $request->execute();
