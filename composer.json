@@ -1,7 +1,6 @@
 {
   "name": "aesislabs/bexio-connector",
   "type": "library",
-  "version": "dev-master",
   "description": "A php library to communicate with the API of Bexio",
   "keywords": ["bexio"],
   "homepage": "https://github.com/aesislabs/bexio-connector",
