@@ -160,6 +160,8 @@ use Aesislabs\BexioConnector\Request\Purchase\Bills\DeleteBillRequest;
 use Aesislabs\BexioConnector\Request\Purchase\Bills\EditBillRequest;
 use Aesislabs\BexioConnector\Request\Purchase\Bills\ListBillsRequest;
 use Aesislabs\BexioConnector\Request\Purchase\Bills\ShowBillRequest;
+use Aesislabs\BexioConnector\Request\Purchase\PurchaseOrders\ListPurchaseOrdersRequest;
+use Aesislabs\BexioConnector\Request\Purchase\PurchaseOrders\ShowPurchaseOrderRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\CreateCommentRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\ListCommentsRequest;
 use Aesislabs\BexioConnector\Request\Sales\Comments\ShowCommentRequest;
@@ -367,6 +369,7 @@ use Aesislabs\BexioConnector\RequestQuery\Projects\ProjectTypesRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Projects\TimesheetsRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Projects\TimesheetStatusRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Purchase\BillsRequestQuery;
+use Aesislabs\BexioConnector\RequestQuery\Purchase\PurchaseOrdersRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\RequestQueryInterface;
 use Aesislabs\BexioConnector\RequestQuery\Sales\CommentsRequestQuery;
 use Aesislabs\BexioConnector\RequestQuery\Sales\DefaultPositionsRequestQuery;
@@ -1501,7 +1504,7 @@ class BexioConnector
         return $request->execute();
     }
 
-    public function getBill(string $billId): Response
+    public function getBill(int $billId): Response
     {
         $this->pathParameters['id'] = $billId;
         $request = new ShowBillRequest(...$this->getRequestParameters());
@@ -3319,6 +3322,28 @@ class BexioConnector
     }
 
     // Sales\Orders
+
+    /**
+     * @param PurchaseOrdersRequestQuery|null $query
+     * @return Response|SuccessResponse|ErrorResponse
+     */
+    public function getPurchaseOrdersList(?PurchaseOrdersRequestQuery $query = null): Response
+    {
+        $this->query = $query;
+        $request = new ListPurchaseOrdersRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
+
+    /**
+     * @param int $orderId
+     * @return Response|SuccessResponse|ErrorResponse
+     */
+    public function getPurchaseOrder(int $orderId): Response
+    {
+        $this->pathParameters['id'] = $orderId;
+        $request = new ShowPurchaseOrderRequest(...$this->getRequestParameters());
+        return $request->execute();
+    }
 
     /**
      * @param OrdersRequestQuery|null $query

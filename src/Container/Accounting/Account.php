@@ -89,9 +89,9 @@ class Account implements ContainerInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      */
-    public function getAccountGroupId(): int
+    public function getAccountGroupId(): ?int
     {
         return $this->accountGroupId;
     }
@@ -105,9 +105,9 @@ class Account implements ContainerInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      */
-    public function getTaxId(): int
+    public function getTaxId(): ?int
     {
         return $this->taxId;
     }

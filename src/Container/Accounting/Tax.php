@@ -138,10 +138,7 @@ class Tax implements ContainerInterface
         return $this->code;
     }
 
-    /**
-     * @return string
-     */
-    public function getDigit(): string
+    public function getDigit(): ?string
     {
         return $this->digit;
     }

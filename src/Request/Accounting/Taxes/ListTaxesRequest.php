@@ -9,7 +9,7 @@ use Aesislabs\BexioConnector\Message\Request;
  */
 class ListTaxesRequest extends Request
 {
-    const API_PATH = '/2.0/taxes';
+    const API_PATH = '/3.0/taxes';
     const API_METHOD = 'GET';
     const API_VERSION_URL = '/3.0';
 

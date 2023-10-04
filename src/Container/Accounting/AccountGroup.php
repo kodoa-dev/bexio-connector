@@ -75,9 +75,9 @@ class AccountGroup implements ContainerInterface
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getParentFibuAccountGroupId(): int
+    public function getParentFibuAccountGroupId(): ?int
     {
         return $this->parentFibuAccountGroupId;
     }

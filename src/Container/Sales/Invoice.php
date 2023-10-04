@@ -572,4 +572,19 @@ class Invoice implements ContainerInterface
     {
         return $this->networkLink;
     }
+
+    /**
+     * @var array
+     * @SerializedName("positions")
+     * @Type("array<Aesislabs\BexioConnector\Container\Sales\ItemPosition>")
+     */
+    protected $positions;
+
+    /**
+     * @return array|ItemPosition[]
+     */
+    public function getPositions(): array
+    {
+        return $this->positions;
+    }
 }

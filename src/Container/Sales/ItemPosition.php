@@ -26,14 +26,14 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("unit_id")
      * @Type("integer")
      */
-    protected $unitId;
+    protected ?int $unitId = null;
 
     /**
      * @var integer
      * @SerializedName("account_id")
      * @Type("integer")
      */
-    protected $accountId;
+    protected ?int $accountId = null;
 
     /**
      * @SerializedName("unit_name")
@@ -46,7 +46,7 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("tax_id")
      * @Type("integer")
      */
-    protected $taxId;
+    protected ?int $taxId = null;
 
     /**
      * @SerializedName("tax_value")
@@ -56,10 +56,17 @@ class ItemPosition implements ContainerInterface
 
     /**
      * @var string
+     * @SerializedName("value")
+     * @Type("string")
+     */
+    protected ?string $value = null;
+
+    /**
+     * @var string
      * @SerializedName("text")
      * @Type("string")
      */
-    protected $text;
+    protected ?string $text = null;
 
     /**
      * @SerializedName("unit_price")
@@ -72,7 +79,7 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("discount_in_percent")
      * @Type("string")
      */
-    protected $discountInPercent;
+    protected ?string $discountInPercent = null;
 
     /**
      * @SerializedName("position_total")
@@ -92,21 +99,56 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("internal_pos")
      * @Type("integer")
      */
-    protected $internalPos;
+    protected ?int $internalPos = null;
 
     /**
      * @var boolean
      * @SerializedName("is_optional")
      * @Type("boolean")
      */
-    protected $isOptional;
+    protected $isOptional =false;
 
     /**
      * @var integer
      * @SerializedName("article_id")
      * @Type("integer")
      */
-    protected $articleId;
+    protected ?int $articleId = null;
+
+    /**
+     * @var boolean
+     * @SerializedName("show_pos_nr")
+     * @Type("boolean")
+     */
+    protected bool $showPosNr = false;
+
+    /**
+     * @var boolean
+     * @SerializedName("show_pos_prices")
+     * @Type("boolean")
+     */
+    protected bool $showPosPrices = false;
+
+    /**
+     * @var boolean
+     * @SerializedName("is_percentual")
+     * @Type("boolean")
+     */
+    protected bool $isPercentual = false;
+
+    /**
+     * @var string
+     * @SerializedName("discount_total")
+     * @Type("string")
+     */
+    protected ?string $discountTotal = null;
+
+    /**
+     * @var string
+     * @SerializedName("total_sum")
+     * @Type("string")
+     */
+    protected ?string $total_sum = null;
 
     /**
      * @var string
@@ -120,7 +162,7 @@ class ItemPosition implements ContainerInterface
      * @SerializedName("parent_id")
      * @Type("integer")
      */
-    protected ?int $parentId;
+    protected ?int $parentId = null;
 
     public function getId(): int
     {
@@ -132,12 +174,12 @@ class ItemPosition implements ContainerInterface
         return $this->amount;
     }
 
-    public function getUnitId(): int
+    public function getUnitId(): ?int
     {
         return $this->unitId;
     }
 
-    public function getAccountId(): int
+    public function getAccountId(): ?int
     {
         return $this->accountId;
     }
@@ -147,7 +189,7 @@ class ItemPosition implements ContainerInterface
         return $this->unitName;
     }
 
-    public function getTaxId(): int
+    public function getTaxId(): ?int
     {
         return $this->taxId;
     }
@@ -177,12 +219,12 @@ class ItemPosition implements ContainerInterface
         return $this->positionTotal;
     }
 
-    public function getPos(): string
+    public function getPos(): ?string
     {
         return $this->pos;
     }
 
-    public function getInternalPos(): int
+    public function getInternalPos(): ?int
     {
         return $this->internalPos ?? 0;
     }
@@ -192,7 +234,7 @@ class ItemPosition implements ContainerInterface
         return $this->isOptional;
     }
 
-    public function getArticleId(): int
+    public function getArticleId(): ?int
     {
         return $this->articleId;
     }
@@ -205,5 +247,35 @@ class ItemPosition implements ContainerInterface
     public function getParentId(): ?int
     {
         return $this->parentId;
+    }
+
+    public function getValue(): ?string
+    {
+        return $this->value;
+    }
+
+    public function isShowPosNr(): bool
+    {
+        return $this->showPosNr;
+    }
+
+    public function isShowPosPrices(): bool
+    {
+        return $this->showPosPrices;
+    }
+
+    public function isPercentual(): bool
+    {
+        return $this->isPercentual;
+    }
+
+    public function getDiscountTotal(): ?string
+    {
+        return $this->discountTotal;
+    }
+
+    public function getTotalSum(): ?string
+    {
+        return $this->total_sum;
     }
 }

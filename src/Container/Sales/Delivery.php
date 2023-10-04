@@ -200,7 +200,7 @@ class Delivery implements ContainerInterface
     /**
      * @var DateTime
      * @SerializedName("updated_at")
-     * @Type("DateTime<'Y-m-d'>")
+     * @Type("DateTime<'Y-m-d H:i:s'>")
      */
     protected $updatedAt;
 
@@ -214,7 +214,155 @@ class Delivery implements ContainerInterface
     /**
      * @var array
      * @SerializedName("positions")
-     * @Type("array")
+     * @Type("array<Aesislabs\BexioConnector\Container\Sales\ItemPosition>")
      */
     protected $positions;
+
+    /**
+     * @return array|ItemPosition[]
+     */
+    public function getPositions(): array
+    {
+        return $this->positions;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function getDocumentNr(): string
+    {
+        return $this->documentNr;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function getContactId(): ?int
+    {
+        return $this->contactId;
+    }
+
+    public function getContactSubId(): ?int
+    {
+        return $this->contactSubId;
+    }
+
+    public function getUserId(): ?int
+    {
+        return $this->userId;
+    }
+
+    public function getLogopaperId(): int
+    {
+        return $this->logopaperId;
+    }
+
+    public function getLanguageId(): int
+    {
+        return $this->languageId;
+    }
+
+    public function getBankAccountId(): int
+    {
+        return $this->bankAccountId;
+    }
+
+    public function getCurrencyId(): int
+    {
+        return $this->currencyId;
+    }
+
+    public function getHeader(): string
+    {
+        return $this->header;
+    }
+
+    public function getFooter(): string
+    {
+        return $this->footer;
+    }
+
+    public function getTotalGross(): string
+    {
+        return $this->totalGross;
+    }
+
+    public function getTotalNet(): string
+    {
+        return $this->totalNet;
+    }
+
+    public function getTotalTaxes(): string
+    {
+        return $this->totalTaxes;
+    }
+
+    public function getTotal(): string
+    {
+        return $this->total;
+    }
+
+    public function getTotalRoundingDifference(): float
+    {
+        return $this->totalRoundingDifference;
+    }
+
+    public function getMwstType(): int
+    {
+        return $this->mwstType;
+    }
+
+    public function isMwstIsNet(): bool
+    {
+        return $this->mwstIsNet;
+    }
+
+    public function getIsValidFrom(): DateTime
+    {
+        return $this->isValidFrom;
+    }
+
+    public function getContactAddress(): string
+    {
+        return $this->contactAddress;
+    }
+
+    public function getDeliveryAddressType(): int
+    {
+        return $this->deliveryAddressType;
+    }
+
+    public function getDeliveryAddress(): string
+    {
+        return $this->deliveryAddress;
+    }
+
+    public function getKbItemStatusId(): int
+    {
+        return $this->kbItemStatusId;
+    }
+
+    public function getApiReference(): ?string
+    {
+        return $this->apiReference;
+    }
+
+    public function getViewedByClientAt(): ?string
+    {
+        return $this->viewedByClientAt;
+    }
+
+    public function getUpdatedAt(): DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    public function getTaxs(): array
+    {
+        return $this->taxs;
+    }
 }

@@ -269,6 +269,21 @@ class Quote implements ContainerInterface
     protected $networkLink;
 
     /**
+     * @var array
+     * @SerializedName("positions")
+     * @Type("array<Aesislabs\BexioConnector\Container\Sales\ItemPosition>")
+     */
+    protected $positions;
+
+    /**
+     * @return array|ItemPosition[]
+     */
+    public function getPositions(): array
+    {
+        return $this->positions;
+    }
+
+    /**
      * @return int
      */
     public function getId(): int
