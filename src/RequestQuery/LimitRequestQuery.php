@@ -7,7 +7,7 @@ abstract class LimitRequestQuery implements RequestQueryInterface
     /**
      * @var int|null
      */
-    protected $limit = 2000;
+    protected $limit = 500;
 
     /**
      * @var int|null
