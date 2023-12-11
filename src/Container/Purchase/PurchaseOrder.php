@@ -1,0 +1,490 @@
+<?php
+
+namespace Aesislabs\BexioConnector\Container\Purchase;
+
+use Aesislabs\BexioConnector\Container\Sales\ItemPosition;
+use Aesislabs\BexioConnector\Container\Sales\PositionNewDefinition;
+use DateTime;
+use Aesislabs\BexioConnector\Container\ContainerInterface;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+
+class PurchaseOrder implements ContainerInterface
+{
+    public const ITEM_STATUSES = [
+        5 => 'Pending',
+        6 => 'Done',
+        15 => 'Partial',
+        21 => 'Canceled',
+    ];
+
+    /**
+     * @var int
+     * @SerializedName("id")
+     * @Type("integer")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     * @SerializedName("document_nr")
+     * @Type("string")
+     */
+    protected $documentNr;
+
+    /**
+     * @var string|null
+     * @SerializedName("title")
+     * @Type("string")
+     */
+    protected $title;
+
+    /**
+     * @var int|null
+     * @SerializedName("contact_id")
+     * @Type("integer")
+     */
+    protected $contactId;
+
+    /**
+     * @var int|null
+     * @SerializedName("contact_sub_id")
+     * @Type("integer")
+     */
+    protected $contactSubId;
+
+    /**
+     * @var int
+     * @SerializedName("user_id")
+     * @Type("integer")
+     */
+    protected $userId;
+
+    /**
+     * @var int|null
+     * @SerializedName("project_id")
+     * @Type("integer")
+     */
+    protected $projectId;
+
+    /**
+     * @var int
+     * @SerializedName("logopaper_id")
+     * @Type("integer")
+     */
+    protected $logopaperId;
+
+    /**
+     * @var int
+     * @SerializedName("language_id")
+     * @Type("integer")
+     */
+    protected $languageId;
+
+    /**
+     * @var int
+     * @SerializedName("bank_account_id")
+     * @Type("integer")
+     */
+    protected $bankAccountId;
+
+    /**
+     * @var int
+     * @SerializedName("currency_id")
+     * @Type("integer")
+     */
+    protected $currencyId;
+
+    /**
+     * @var int
+     * @SerializedName("payment_type_id")
+     * @Type("integer")
+     */
+    protected $paymentTypeId;
+
+    /**
+     * @var string
+     * @SerializedName("header")
+     * @Type("string")
+     */
+    protected $header;
+
+    /**
+     * @var string
+     * @SerializedName("footer")
+     * @Type("string")
+     */
+    protected $footer;
+
+    /**
+     * @var double
+     * @SerializedName("total_rounding_difference")
+     * @Type("double")
+     */
+    protected $totalRoundingDifference;
+
+    /**
+     * @var int
+     * @SerializedName("mwst_type")
+     * @Type("integer")
+     */
+    protected $mwstType;
+
+    /**
+     * @var bool
+     * @SerializedName("mwst_is_net")
+     * @Type("boolean")
+     */
+    protected $mwstIsNet;
+
+    /**
+     * @var bool
+     * @SerializedName("show_position_taxes")
+     * @Type("boolean")
+     */
+    protected $showPositionTaxes;
+
+    /**
+     * @var DateTime
+     * @SerializedName("is_valid_from")
+     * @Type("DateTime<'Y-m-d'>")
+     */
+    protected $isValidFrom;
+
+    /**
+     * @var string
+     * @SerializedName("contact_address")
+     * @Type("string")
+     */
+    protected $contactAddressManual;
+
+    /**
+     * @var integer
+     * @SerializedName("delivery_address_type")
+     * @Type("integer")
+     */
+    protected $deliveryAddressType;
+
+    /**
+     * @var string
+     * @SerializedName("delivery_address")
+     * @Type("string")
+     */
+    protected $deliveryAddressManual;
+
+    /**
+     * @var int
+     * @SerializedName("kb_item_status_id")
+     * @Type("integer")
+     */
+    protected $kbItemStatusId;
+
+    /**
+     * @var string|null
+     * @SerializedName("api_reference")
+     * @Type("string")
+     */
+    protected $apiReference;
+
+    /**
+     * @var string|null
+     * @SerializedName("viewed_by_client_at")
+     * @Type("string")
+     */
+    protected $viewedByClientAt;
+
+    /**
+     * @var DateTime
+     * @SerializedName("updated_at")
+     * @Type("DateTime<'Y-m-d\TH:i:sP'>")
+     */
+    protected $updatedAt;
+
+    /**
+     * @var string|null
+     * @SerializedName("template_slug")
+     * @Type("string")
+     */
+    protected $templateSlug;
+
+    /**
+     * @var string|null
+     * @SerializedName("terms_of_payment_text")
+     * @Type("string")
+     */
+    protected $termsOfPaymentText;
+
+    /**
+     * @var array
+     * @SerializedName("taxs")
+     * @Type("array")
+     */
+    protected $taxs;
+
+    /**
+     * @var PositionNewDefinition
+     * @SerializedName("positions")
+     * @Type("Aesislabs\BexioConnector\Container\Sales\PositionNewDefinition")
+     */
+    protected $positions;
+
+    /**
+     * @var string|null
+     * @SerializedName("network_link")
+     * @Type("string")
+     */
+    protected $networkLink;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDocumentNr(): string
+    {
+        return $this->documentNr;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getContactId(): ?int
+    {
+        return $this->contactId;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getContactSubId(): ?int
+    {
+        return $this->contactSubId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserId(): int
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getProjectId(): ?int
+    {
+        return $this->projectId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLogopaperId(): int
+    {
+        return $this->logopaperId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLanguageId(): int
+    {
+        return $this->languageId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBankAccountId(): int
+    {
+        return $this->bankAccountId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCurrencyId(): int
+    {
+        return $this->currencyId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPaymentTypeId(): int
+    {
+        return $this->paymentTypeId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHeader(): string
+    {
+        return $this->header;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFooter(): string
+    {
+        return $this->footer;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalRoundingDifference(): float
+    {
+        return $this->totalRoundingDifference;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMwstType(): int
+    {
+        return $this->mwstType;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isMwstIsNet(): bool
+    {
+        return $this->mwstIsNet;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isShowPositionTaxes(): bool
+    {
+        return $this->showPositionTaxes;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getIsValidFrom(): DateTime
+    {
+        return $this->isValidFrom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactAddressManual(): string
+    {
+        return $this->contactAddressManual;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeliveryAddressType(): int
+    {
+        return $this->deliveryAddressType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliveryAddressManual(): string
+    {
+        return $this->deliveryAddressManual;
+    }
+
+    /**
+     * @return int
+     */
+    public function getKbItemStatusId(): int
+    {
+        return $this->kbItemStatusId;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRecurring(): bool
+    {
+        return $this->isRecurring;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getApiReference(): ?string
+    {
+        return $this->apiReference;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getViewedByClientAt(): ?string
+    {
+        return $this->viewedByClientAt;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getUpdatedAt(): DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTemplateSlug(): ?string
+    {
+        return $this->templateSlug;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTaxs(): array
+    {
+        return $this->taxs;
+    }
+
+    /**
+     * @return PositionNewDefinition
+     */
+    public function getPositions(): PositionNewDefinition
+    {
+        return $this->positions;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getNetworkLink(): ?string
+    {
+        return $this->networkLink;
+    }
+
+    public function getTermsOfPaymentText(): ?string
+    {
+        return $this->termsOfPaymentText;
+    }
+}
