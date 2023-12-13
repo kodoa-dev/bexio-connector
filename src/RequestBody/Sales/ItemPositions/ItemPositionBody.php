@@ -3,6 +3,7 @@
 namespace Aesislabs\BexioConnector\RequestBody\Sales\ItemPositions;
 
 use Aesislabs\BexioConnector\RequestBody\AbstractBody;
+use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -12,6 +13,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("amount")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $amount;
@@ -19,6 +21,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("unit_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $unitId;
@@ -26,6 +29,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("account_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $accountId;
@@ -33,6 +37,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("tax_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $taxId;
@@ -40,6 +45,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("text")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $text;
@@ -47,6 +53,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("unit_price")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $unitPrice;
@@ -54,6 +61,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("discount_in_percent")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $discountInPercent;
@@ -61,6 +69,7 @@ class ItemPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("article_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $articleId;

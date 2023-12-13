@@ -9,6 +9,7 @@ use Aesislabs\BexioConnector\Response\ErrorResponse;
 use Aesislabs\BexioConnector\Response\SuccessResponse;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
+use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 use Psr\Log\LoggerInterface;
@@ -213,7 +214,7 @@ abstract class Request
     protected function getBodyJson(): ?string
     {
         return isset($this->body)
-            ? $this->getSerializer()->serialize($this->body->getBody(), 'json')
+            ? $this->getSerializer()->serialize($this->body->getBody(), 'json', SerializationContext::create()->setGroups(array('write')))
             : null;
     }
 

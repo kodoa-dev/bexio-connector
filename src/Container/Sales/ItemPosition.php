@@ -3,6 +3,7 @@
 namespace Aesislabs\BexioConnector\Container\Sales;
 
 use Aesislabs\BexioConnector\Container\ContainerInterface;
+use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -17,6 +18,7 @@ class ItemPosition implements ContainerInterface
 
     /**
      * @SerializedName("amount")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected ?string $amount = null;
@@ -24,6 +26,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var integer
      * @SerializedName("unit_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected ?int $unitId = null;
@@ -31,6 +34,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var integer
      * @SerializedName("account_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected ?int $accountId = null;
@@ -44,6 +48,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var integer
      * @SerializedName("tax_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected ?int $taxId = null;
@@ -57,6 +62,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var string
      * @SerializedName("value")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected ?string $value = null;
@@ -64,12 +70,15 @@ class ItemPosition implements ContainerInterface
     /**
      * @var string
      * @SerializedName("text")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected ?string $text = null;
 
     /**
      * @SerializedName("unit_price")
+     * @Serializer\SkipWhenEmpty
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected ?string $unitPrice = null;
@@ -104,6 +113,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var boolean
      * @SerializedName("is_optional")
+     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $isOptional =false;
@@ -111,6 +121,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var integer
      * @SerializedName("article_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected ?int $articleId = null;
@@ -153,6 +164,7 @@ class ItemPosition implements ContainerInterface
     /**
      * @var string
      * @SerializedName("type")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $type;
@@ -160,11 +172,12 @@ class ItemPosition implements ContainerInterface
     /**
      * @var integer|null
      * @SerializedName("parent_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected ?int $parentId = null;
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -277,5 +290,120 @@ class ItemPosition implements ContainerInterface
     public function getTotalSum(): ?string
     {
         return $this->total_sum;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    public function setAmount(?string $amount): void
+    {
+        $this->amount = $amount;
+    }
+
+    public function setUnitId(?int $unitId): void
+    {
+        $this->unitId = $unitId;
+    }
+
+    public function setAccountId(?int $accountId): void
+    {
+        $this->accountId = $accountId;
+    }
+
+    public function setUnitName(?string $unitName): void
+    {
+        $this->unitName = $unitName;
+    }
+
+    public function setTaxId(?int $taxId): void
+    {
+        $this->taxId = $taxId;
+    }
+
+    public function setTaxValue(?string $taxValue): void
+    {
+        $this->taxValue = $taxValue;
+    }
+
+    public function setValue(?string $value): void
+    {
+        $this->value = $value;
+    }
+
+    public function setText(?string $text): void
+    {
+        $this->text = $text;
+    }
+
+    public function setUnitPrice(?string $unitPrice): void
+    {
+        $this->unitPrice = $unitPrice;
+    }
+
+    public function setDiscountInPercent(?string $discountInPercent): void
+    {
+        $this->discountInPercent = $discountInPercent;
+    }
+
+    public function setPositionTotal(?string $positionTotal): void
+    {
+        $this->positionTotal = $positionTotal;
+    }
+
+    public function setPos(?string $pos): void
+    {
+        $this->pos = $pos;
+    }
+
+    public function setInternalPos(?int $internalPos): void
+    {
+        $this->internalPos = $internalPos;
+    }
+
+    public function setIsOptional(bool $isOptional): void
+    {
+        $this->isOptional = $isOptional;
+    }
+
+    public function setArticleId(?int $articleId): void
+    {
+        $this->articleId = $articleId;
+    }
+
+    public function setShowPosNr(bool $showPosNr): void
+    {
+        $this->showPosNr = $showPosNr;
+    }
+
+    public function setShowPosPrices(bool $showPosPrices): void
+    {
+        $this->showPosPrices = $showPosPrices;
+    }
+
+    public function setIsPercentual(bool $isPercentual): void
+    {
+        $this->isPercentual = $isPercentual;
+    }
+
+    public function setDiscountTotal(?string $discountTotal): void
+    {
+        $this->discountTotal = $discountTotal;
+    }
+
+    public function setTotalSum(?string $total_sum): void
+    {
+        $this->total_sum = $total_sum;
+    }
+
+    public function setType(string $type): void
+    {
+        $this->type = $type;
+    }
+
+    public function setParentId(?int $parentId): void
+    {
+        $this->parentId = $parentId;
     }
 }

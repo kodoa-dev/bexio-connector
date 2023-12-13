@@ -3,6 +3,7 @@
 namespace Aesislabs\BexioConnector\RequestBody\Sales\DefaultPositions;
 
 use Aesislabs\BexioConnector\RequestBody\AbstractBody;
+use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -19,6 +20,7 @@ class DefaultPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("unit_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $unitId;
@@ -26,6 +28,7 @@ class DefaultPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("account_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $accountId;
@@ -33,6 +36,7 @@ class DefaultPositionBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("tax_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $taxId;
@@ -47,6 +51,8 @@ class DefaultPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("unit_price")
+     * @Serializer\SkipWhenEmpty
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $unitPrice;
