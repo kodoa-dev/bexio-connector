@@ -312,7 +312,7 @@ class QuoteBody extends AbstractBody
      * @param int $mwstType
      * @return QuoteBody
      */
-    public function setMwstType(int $mwstType): QuoteBody
+    public function setMwstType(?int $mwstType): QuoteBody
     {
         $this->mwstType = $mwstType;
         return $this;

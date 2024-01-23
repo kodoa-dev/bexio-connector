@@ -5,12 +5,14 @@ namespace Aesislabs\BexioConnector\RequestBody\Items\Items;
 use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation as Serializer;
 
 class ItemBody extends AbstractBody
 {
     /**
      * @var integer
      * @SerializedName("user_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $userId;
@@ -32,6 +34,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("deliverer_code")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $delivererCode;
@@ -39,6 +42,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("deliverer_name")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $delivererName;
@@ -46,6 +50,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("deliverer_description")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $delivererDescription;
@@ -53,6 +58,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("intern_code")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $internCode;
@@ -60,6 +66,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("intern_name")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $internName;
@@ -67,6 +74,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("intern_description")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $internDescription;
@@ -74,6 +82,7 @@ class ItemBody extends AbstractBody
     /**
      * @var float|null
      * @SerializedName("purchase_price")
+     * @Serializer\Groups({"write"})
      * @Type("float")
      */
     protected $purchasePrice;
@@ -81,6 +90,7 @@ class ItemBody extends AbstractBody
     /**
      * @var float|null
      * @SerializedName("sale_price")
+     * @Serializer\Groups({"write"})
      * @Type("float")
      */
     protected $salePrice;
@@ -88,6 +98,7 @@ class ItemBody extends AbstractBody
     /**
      * @var float|null
      * @SerializedName("purchase_total")
+     * @Serializer\Groups({"write"})
      * @Type("float")
      */
     protected $purchaseTotal;
@@ -95,6 +106,7 @@ class ItemBody extends AbstractBody
     /**
      * @var float|null
      * @SerializedName("sale_total")
+     * @Serializer\Groups({"write"})
      * @Type("float")
      */
     protected $saleTotal;
@@ -109,6 +121,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("tax_income_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $taxIncomeId;
@@ -116,6 +129,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("tax_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $taxId;
@@ -123,6 +137,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("tax_expense_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $taxExpenseId;
@@ -137,6 +152,7 @@ class ItemBody extends AbstractBody
     /**
      * @var boolean
      * @SerializedName("is_stock")
+     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $isStock;
@@ -144,6 +160,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("stock_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $stockId;
@@ -151,6 +168,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("stock_place_id")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $stockPlaceId;
@@ -158,6 +176,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("stock_nr")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $stockNr;
@@ -165,6 +184,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("stock_min_nr")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $stockMinNr;
@@ -172,6 +192,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("width")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $width;
@@ -179,6 +200,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("height")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $height;
@@ -186,6 +208,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("weight")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $weight;
@@ -193,6 +216,7 @@ class ItemBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("volume")
+     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $volume;
@@ -207,6 +231,7 @@ class ItemBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("remarks")
+     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $remarks;
