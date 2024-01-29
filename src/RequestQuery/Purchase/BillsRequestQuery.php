@@ -8,6 +8,7 @@ class BillsRequestQuery extends OrderLimitRequestQuery
 {
     public const ORDER_BY_ID = 'id';
     private int $page = 0;
+    protected $limit = 500;
 
     public function setPage(int $page)
     {
