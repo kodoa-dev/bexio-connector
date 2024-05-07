@@ -68,7 +68,7 @@ class Contact implements ContainerInterface
     /**
      * @var DateTime|null
      * @SerializedName("birthday")
-     * @Type("date")
+     * @Type("DateTime<'Y-m-d'>")
      */
     protected $birthday;
 
