@@ -1504,7 +1504,7 @@ class BexioConnector
         return $request->execute();
     }
 
-    public function getBill(int $billId): Response
+    public function getBill(string $billId): Response
     {
         $this->pathParameters['id'] = $billId;
         $request = new ShowBillRequest(...$this->getRequestParameters());
