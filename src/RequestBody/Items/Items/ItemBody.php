@@ -152,7 +152,6 @@ class ItemBody extends AbstractBody
     /**
      * @var boolean
      * @SerializedName("is_stock")
-     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $isStock;

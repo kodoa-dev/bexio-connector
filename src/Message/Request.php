@@ -100,10 +100,10 @@ abstract class Request
             );
         } catch (GuzzleException $e) {
             if ($this->logger) {
-                $this->logger->error($e->getMessage());
+                $this->logger->error($e->getResponse()->getBody()->getContents());
             }
 
-            return (new ErrorResponse())->setCode($e->getCode())->setMessage($e->getMessage());
+            return (new ErrorResponse())->setCode($e->getCode())->setMessage($e->getResponse()->getBody()->getContents());
         }
 
         if (!in_array($response->getStatusCode(), [200, 201])) {
