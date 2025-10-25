@@ -285,7 +285,10 @@ class Invoice implements ContainerInterface
         return $this->id;
     }
 
-    public function getDocumentNr(): ?string
+    /**
+     * @return string
+     */
+    public function getDocumentNr(): string
     {
         return $this->documentNr;
     }

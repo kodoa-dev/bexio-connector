@@ -98,11 +98,6 @@ class Bill implements ContainerInterface
      */
     protected array $attachmentIds;
 
-    /**
-     * @Serializer\Type("array")
-     */
-    protected array $lineItems;
-
     public function getId(): string
     {
         return $this->id;
@@ -191,15 +186,5 @@ class Bill implements ContainerInterface
     public function getAttachmentIds(): array
     {
         return $this->attachmentIds;
-    }
-
-    public function getLineItems(): array
-    {
-        return $this->lineItems;
-    }
-
-    public function setLineItems(array $lineItems): void
-    {
-        $this->lineItems = $lineItems;
     }
 }

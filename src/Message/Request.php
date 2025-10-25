@@ -9,7 +9,6 @@ use Aesislabs\BexioConnector\Response\ErrorResponse;
 use Aesislabs\BexioConnector\Response\SuccessResponse;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
-use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 use Psr\Log\LoggerInterface;
@@ -100,10 +99,10 @@ abstract class Request
             );
         } catch (GuzzleException $e) {
             if ($this->logger) {
-                $this->logger->error($e->getResponse()->getBody()->getContents());
+                $this->logger->error($e->getMessage());
             }
 
-            return (new ErrorResponse())->setCode($e->getCode())->setMessage($e->getResponse()->getBody()->getContents());
+            return (new ErrorResponse())->setCode($e->getCode())->setMessage($e->getMessage());
         }
 
         if (!in_array($response->getStatusCode(), [200, 201])) {
@@ -214,7 +213,7 @@ abstract class Request
     protected function getBodyJson(): ?string
     {
         return isset($this->body)
-            ? $this->getSerializer()->serialize($this->body->getBody(), 'json', SerializationContext::create()->setGroups(array('write')))
+            ? $this->getSerializer()->serialize($this->body->getBody(), 'json')
             : null;
     }
 

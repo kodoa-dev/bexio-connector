@@ -5,7 +5,6 @@ namespace Aesislabs\BexioConnector\RequestBody\Sales\Quotes;
 use DateTime;
 use Aesislabs\BexioConnector\RequestBody\AbstractBody;
 use Aesislabs\BexioConnector\RequestBody\Sales\PositionTrait;
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -23,7 +22,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("title")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $title;
@@ -31,7 +29,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int|null
      * @SerializedName("contact_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $contactId;
@@ -39,7 +36,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int|null
      * @SerializedName("contact_sub_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $contactSubId;
@@ -47,7 +43,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("user_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $userId;
@@ -55,7 +50,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int|null
      * @SerializedName("pr_project_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $prProjectId;
@@ -63,7 +57,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("logopaper_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $logopaperId;
@@ -71,7 +64,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("language_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $languageId;
@@ -79,7 +71,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("bank_account_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $bankAccountId;
@@ -87,7 +78,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("currency_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $currencyId;
@@ -95,7 +85,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("payment_type_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $paymentTypeId;
@@ -103,7 +92,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("header")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $header;
@@ -111,7 +99,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("footer")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $footer;
@@ -119,7 +106,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var int
      * @SerializedName("mwst_type")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $mwstType;
@@ -127,7 +113,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var bool
      * @SerializedName("mwst_is_net")
-     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $mwstIsNet;
@@ -135,7 +120,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var bool
      * @SerializedName("show_position_taxes")
-     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $showPositionTaxes;
@@ -143,7 +127,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var DateTime
      * @SerializedName("is_valid_from")
-     * @Serializer\Groups({"write"})
      * @Type("DateTime<'Y-m-d'>")
      */
     protected $isValidFrom;
@@ -151,7 +134,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var DateTime
      * @SerializedName("is_valid_until")
-     * @Serializer\Groups({"write"})
      * @Type("DateTime<'Y-m-d'>")
      */
     protected $isValidUntil;
@@ -159,7 +141,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var integer
      * @SerializedName("delivery_address_type")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $deliveryAddressType;
@@ -167,7 +148,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("api_reference")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $apiReference;
@@ -175,7 +155,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var string|null
      * @SerializedName("viewed_by_client_at")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $viewedByClientAt;
@@ -183,7 +162,6 @@ class QuoteBody extends AbstractBody
     /**
      * @var integer|null
      * @SerializedName("kb_terms_of_payment_template_id")
-     * @Serializer\Groups({"write"})
      * @Type("integer")
      */
     protected $kbTermsOfPaymentTemplateId;
@@ -292,7 +270,7 @@ class QuoteBody extends AbstractBody
      * @param string $header
      * @return QuoteBody
      */
-    public function setHeader(?string $header): QuoteBody
+    public function setHeader(string $header): QuoteBody
     {
         $this->header = $header;
         return $this;
@@ -302,7 +280,7 @@ class QuoteBody extends AbstractBody
      * @param string $footer
      * @return QuoteBody
      */
-    public function setFooter(?string $footer): QuoteBody
+    public function setFooter(string $footer): QuoteBody
     {
         $this->footer = $footer;
         return $this;
@@ -312,7 +290,7 @@ class QuoteBody extends AbstractBody
      * @param int $mwstType
      * @return QuoteBody
      */
-    public function setMwstType(?int $mwstType): QuoteBody
+    public function setMwstType(int $mwstType): QuoteBody
     {
         $this->mwstType = $mwstType;
         return $this;

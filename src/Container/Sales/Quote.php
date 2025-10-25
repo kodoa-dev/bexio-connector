@@ -16,16 +16,6 @@ class Quote implements ContainerInterface
         4 => 'Declined',
     ];
 
-    public function reset(): void
-    {
-        $this->id = null;
-        $this->isValidFrom = null;
-        $this->isValidUntil = null;
-        $this->viewedByClientAt = null;
-        $this->updatedAt = null;
-        $this->positions = [];
-    }
-
     /**
      * @var int
      * @SerializedName("id")

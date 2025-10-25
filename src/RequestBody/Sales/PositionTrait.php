@@ -8,7 +8,6 @@ use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedItemPos
 use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedPagebreakPositionBody;
 use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedSubtotalPositionBody;
 use Aesislabs\BexioConnector\RequestBody\Sales\ExtendedPositions\ExtendedTextPositionBody;
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -17,7 +16,6 @@ trait PositionTrait
     /**
      * @var array
      * @SerializedName("positions")
-     * @Serializer\Groups({"write"})
      * @Type("array")
      */
     protected $positions = [];

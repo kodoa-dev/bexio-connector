@@ -1504,7 +1504,7 @@ class BexioConnector
         return $request->execute();
     }
 
-    public function getBill(string $billId): Response
+    public function getBill(int $billId): Response
     {
         $this->pathParameters['id'] = $billId;
         $request = new ShowBillRequest(...$this->getRequestParameters());
@@ -1570,7 +1570,7 @@ class BexioConnector
      */
     public function getItem(int $itemId): Response
     {
-        $this->pathParameters['article_id'] = $itemId;
+        $this->pathParameters['item_id'] = $itemId;
         $request = new ShowItemRequest(...$this->getRequestParameters());
         return $request->execute();
     }
@@ -1594,7 +1594,7 @@ class BexioConnector
      */
     public function deleteItem(int $itemId): Response
     {
-        $this->pathParameters['article_id'] = $itemId;
+        $this->pathParameters['item_id'] = $itemId;
         $request = new DeleteItemRequest(...$this->getRequestParameters());
         return $request->execute();
     }

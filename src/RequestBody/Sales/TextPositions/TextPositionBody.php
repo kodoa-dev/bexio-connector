@@ -3,7 +3,6 @@
 namespace Aesislabs\BexioConnector\RequestBody\Sales\TextPositions;
 
 use Aesislabs\BexioConnector\RequestBody\AbstractBody;
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -12,7 +11,6 @@ class TextPositionBody extends AbstractBody
     /**
      * @var string
      * @SerializedName("text")
-     * @Serializer\Groups({"write"})
      * @Type("string")
      */
     protected $text;
@@ -20,7 +18,6 @@ class TextPositionBody extends AbstractBody
     /**
      * @var boolean
      * @SerializedName("show_pos_nr")
-     * @Serializer\Groups({"write"})
      * @Type("boolean")
      */
     protected $showPosNr;
